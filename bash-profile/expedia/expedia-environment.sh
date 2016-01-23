@@ -28,8 +28,8 @@
 # -------------------------------------------------------------------
 
     # Java Path
-    export JAVA_VERSION=1.7.0_60
-    #export JAVA_VERSION=1.8.0_25
+    #export JAVA_VERSION=1.7.0_60
+    export JAVA_VERSION=1.8.0_25
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk$JAVA_VERSION.jdk/Contents/Home
 
     # Maven Path

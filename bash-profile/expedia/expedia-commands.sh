@@ -87,3 +87,4 @@
       alias expweb-clean="sudo rm -rf $TRUNK/build/tomcat"
       alias expweb-build="expweb-clean; gw clean build"
       alias expweb-start="expweb-clean; gw startExpweb"
+      alias trunkLastGreenBuild = "p4 counters | grep expweb_trunk-ci_last_green_cl"
