@@ -19,7 +19,6 @@
       alias .4='cd ../../../../'                  # Go back 4 directory levels
       alias .5='cd ../../../../../'               # Go back 5 directory levels
       alias .6='cd ../../../../../../'            # Go back 6 directory levels
-      alias edit='subl'                           # edit:         Opens any file in sublime editor
       alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
       alias c='clear'                             # c:            Clear terminal display
       alias which='type -all'                     # which:        Find executables
@@ -29,7 +28,7 @@
       mkcd () { mkdir -p "$1" && cd "$1"; }       # mkcd:          Makes new Dir and jumps inside
       trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
       ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
-      alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
+      alias DT='tee ~/Desktop/terminal-out.txt'   # DT:           Pipe content to file on MacOS Desktop
       chrome () {
           if [[ $1 == "http://"* ]] || [[ $1 == "https://"* ]] || [[ $1 == "file://"* ]]
           then
