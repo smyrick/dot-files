@@ -7,9 +7,10 @@
     # Quick Commands
     # -------------------------------------------------------------------
       start-workday() {
-        #printHeader "Sync P4 files";
+        printHeader "Sync P4 files";
         #eval nlp-sync; eval smartdata-sync; eval nautilus-sync; eval semantha-sync;
-        cd;
+        eval expweb-sync-latest;
+        command cd;
         printHeader "Update brew formula";
         brew update; brew upgrade --all; brew cleanup; brew doctor;
         printHeader "Update npm packages";
