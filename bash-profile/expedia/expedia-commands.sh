@@ -9,8 +9,8 @@
       start-workday() {
         printHeader "Sync P4 files";
         #eval nlp-sync; eval smartdata-sync; eval nautilus-sync; eval semantha-sync;
-        eval expweb-sync-latest;
-        command cd;
+        #eval expweb-sync-latest;
+        #command cd;
         printHeader "Update brew formula";
         brew update; brew upgrade --all; brew cleanup; brew doctor;
         printHeader "Update npm packages";
@@ -88,4 +88,4 @@
       alias expweb-clean="sudo rm -rf $TRUNK/build/tomcat"
       alias expweb-build="expweb-clean; gw clean -x check -Pdebug build"
       alias expweb-start="expweb-clean; gw -Pdebug startExpweb"
-      alias expweb-sync-latest="p4_latest=`p4 counters | grep promoted`;p4 sync ${TRUNK}...@${p4_latest##* }"
+      alias expweb-sync-latest="p4_latest=`p4 counters | grep promoted`; p4 sync ${TRUNK}...@${p4_latest##* }"

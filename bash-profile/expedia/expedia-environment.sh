@@ -17,6 +17,10 @@
     E3_PRODUCTS=$E3_SHOPSVC/products
     E3_PROTOTYPES=$E3_SHOPSVC/prototypes/modules
 
+    # Perforce ExpWeb configs
+    export P4CLIENT=smyrick_1994
+    export P4PORT=perforce.sea.corp.expecn.com:1994
+
     # Build / Output paths
     export BUILD_SYSTEM_ROOT=$P4_1967/depot/b/releasemanagement/products/BuildSystem
     export OUTPUT_ROOT=$HOME/build
