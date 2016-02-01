@@ -9,7 +9,7 @@
       start-workday() {
         printHeader "Sync P4 files";
         #eval nlp-sync; eval smartdata-sync; eval nautilus-sync; eval semantha-sync;
-        #eval expweb-sync-latest;
+        eval expweb-sync-latest;
         #command cd;
         printHeader "Update brew formula";
         brew update; brew upgrade --all; brew cleanup; brew doctor;
@@ -86,6 +86,7 @@
       alias cd-expweb="cd $TRUNK"
       alias gw="./gradlew"
       alias expweb-clean="sudo rm -rf $TRUNK/build/tomcat"
-      alias expweb-build="expweb-clean; gw clean -x check -Pdebug build"
-      alias expweb-start="expweb-clean; gw -Pdebug startExpweb"
-      alias expweb-sync-latest="p4_latest=`p4 counters | grep promoted`; p4 sync ${TRUNK}...@${p4_latest##* }"
+      alias expweb-build="cd-expweb; expweb-clean; gw clean -x check -Pdebug build"
+      alias expweb-start="cd-expweb; expweb-clean; gw -Pdebug startExpweb"
+      alias expweb-latest-version="p4 counters | grep trunk-ci_last_green_cl | ggrep -oP '(\d)+'"
+      alias expweb-sync-latest="cd-expweb; p4 sync //www/expweb/trunk/...@$(expweb-latest-version)"
