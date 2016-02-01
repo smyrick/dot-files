@@ -38,18 +38,9 @@
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk$JAVA_VERSION.jdk/Contents/Home
 
     # Maven Path
-    export MAVEN_VERSION=3.3.3
-    export M3_HOME=/usr/local/Cellar/maven/$MAVEN_VERSION/libexec
-
-    # Ant Path
-    export ANT_VERSION=1.8.1
-    export ANT_HOME=$BUILD_SYSTEM_ROOT/buildsupport/apache-ant-$ANT_VERSION
-
-    # Tomcat Path
-    export TOMCAT_VERSION=7.0.54
-    export TOMCAT_HOME=/Library/Tomcat/apache-tomcat-$TOMCAT_VERSION
-    export CATALINA_HOME=$TOMCAT_HOME
-
+    export MAVEN_VERSION="`mvn -v | grep 'Apache Maven' | ggrep -oP '\d\.\d\.\d'`"
+    export MAVEN_HOME=/usr/local/Cellar/maven/$MAVEN_VERSION/libexec
+    export M3_HOME=$MAVEN_HOME
 
     # Add to PATH
-    export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin:$M3_HOME/bin
+    export PATH=$PATH:$JAVA_HOME/bin:$M3_HOME/bin
