@@ -18,6 +18,7 @@
     E3_PROTOTYPES=$E3_SHOPSVC/prototypes/modules
 
     # Perforce ExpWeb configs
+    export P4CONFIG=p4.ini
     export P4CLIENT=smyrick_1994
     export P4PORT=perforce.sea.corp.expecn.com:1994
 

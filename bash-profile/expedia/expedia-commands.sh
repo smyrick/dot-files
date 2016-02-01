@@ -89,4 +89,4 @@
       alias expweb-build="cd-expweb; expweb-clean; gw clean -x check -Pdebug build"
       alias expweb-start="cd-expweb; expweb-clean; gw -Pdebug startExpweb"
       alias expweb-latest-version="p4 counters | grep trunk-ci_last_green_cl | ggrep -oP '(\d)+'"
-      alias expweb-sync-latest="cd-expweb; p4 sync //www/expweb/trunk/...@$(expweb-latest-version)"
+      alias expweb-sync-latest="cd-expweb; p4 sync -f ${TRUNK}/...@$(expweb-latest-version),@$(expweb-latest-version)"
