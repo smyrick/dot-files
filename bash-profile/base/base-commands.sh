@@ -29,6 +29,9 @@
       trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
       ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
       alias DT='tee ~/Desktop/terminal-out.txt'   # DT:           Pipe content to file on MacOS Desktop
+
+    # chrome:  open a url (file or http[s]) in Chrome browser
+    # -------------------------------------------------------------------
       chrome () {
           if [[ $1 == "http://"* ]] || [[ $1 == "https://"* ]] || [[ $1 == "file://"* ]]
           then
@@ -42,25 +45,25 @@
     # -------------------------------------------------------------------
         alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 
-    #   mans:   Search manpage given in agument '1' for term given in argument '2' (case insensitive)
-    #           displays paginated result with colored search terms and two lines surrounding each hit.             Example: mans mplayer codec
-    #   --------------------------------------------------------------------
-        mans () {
-            man $1 | grep -iC2 --color=always $2 | less
-        }
+    # mans:   Search manpage given in agument '1' for term given in argument '2' (case insensitive)
+    #         displays paginated result with colored search terms and two lines surrounding each hit.             Example: mans mplayer codec
+    # --------------------------------------------------------------------
+      mans () {
+        man $1 | grep -iC2 --color=always $2 | less
+      }
 
-    #   showa: to remind yourself of an alias (given some part of it)
-    #   ------------------------------------------------------------
-        showa () { /usr/bin/grep --color=always -i -a1 $@ ~/Library/init/bash/aliases.bash | grep -v '^\s*$' | less -FSRXc ; }
+    # showa: to remind yourself of an alias (given some part of it)
+    # ------------------------------------------------------------
+      showa () { /usr/bin/grep --color=always -i -a1 $@ ~/Library/init/bash/aliases.bash | grep -v '^\s*$' | less -FSRXc ; }
 
-    #   printHeader: print text in color appending '-----' string to the start and end
+    # printHeader: print text in color appending '-----' string to the start and end
     #   $1 = string to print
     #   $2 = tput color code, default 14 (light-blue)
-    #   ------------------------------------------------------------
-        printHeader () {
-          colorCode=14
-          echo "$(tput setaf ${2-$colorCode})----- $1 -----$(tput sgr 0)"
-        }
+    # ------------------------------------------------------------
+      printHeader () {
+        colorCode=14
+        echo "$(tput setaf ${2-$colorCode})----- $1 -----$(tput sgr 0)"
+      }
 
 #   -------------------------------
 #   FILE AND FOLDER MANAGEMENT
