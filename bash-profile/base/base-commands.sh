@@ -30,6 +30,11 @@
       ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
       alias DT='tee ~/Desktop/terminal-out.txt'   # DT:           Pipe content to file on MacOS Desktop
 
+      # Linux terminal reset. Clear history
+      reset() {
+        osascript -e 'if application "Terminal" is frontmost then tell application "System Events" to keystroke "k" using command down';
+      }
+
     # chrome:  open a url (file or http[s]) in Chrome browser
     # -------------------------------------------------------------------
       chrome () {
