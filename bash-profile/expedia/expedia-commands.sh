@@ -9,13 +9,14 @@
       start-workday() {
         printHeader "Sync P4 files";
         #eval nlp-sync; eval smartdata-sync; eval nautilus-sync; eval semantha-sync;
-        eval expweb-sync-latest;
+        #eval expweb-sync-latest;
         command cd;
         printHeader "Update brew formula";
         brew update; brew upgrade --all; brew cleanup; brew doctor;
         printHeader "Update npm packages";
         npm update -g;
       }
+
 
     # Ant Commands
     # -------------------------------------------------------------------
@@ -89,4 +90,7 @@
       alias expweb-build="cd-expweb; expweb-clean; gw clean -x check -Pdebug build"
       alias expweb-start="cd-expweb; expweb-clean; gw -Pdebug startExpweb"
       alias expweb-latest-version="p4 counters | grep trunk-ci_last_green_cl | ggrep -oP '(\d)+'"
-      alias expweb-sync-latest="p4 sync -f ${TRUNK}/...@$(expweb-latest-version),@$(expweb-latest-version)"
+      expweb-sync-latest() {
+        eval "cd-expweb";
+        p4 sync -f ${TRUNK}/...@$(expweb-latest-version);
+      }
