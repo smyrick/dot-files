@@ -32,7 +32,7 @@
 
     # Java Path
     #export JAVA_VERSION=1.7.0_60
-    export JAVA_VERSION=1.8.0_25
+    export JAVA_VERSION=1.8.0_74
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk$JAVA_VERSION.jdk/Contents/Home
 
     # Ant Path
@@ -40,7 +40,7 @@
     export ANT_HOME=$BUILD_SYSTEM_ROOT/buildsupport/apache-ant-$ANT_VERSION
 
     # Maven Path
-    export MAVEN_VERSION="`mvn -v | grep 'Apache Maven' | ggrep -oP '\d\.\d\.\d'`"
+    export MAVEN_VERSION=3.3.9
     export MAVEN_HOME=/usr/local/Cellar/maven/$MAVEN_VERSION/libexec
     export M3_HOME=$MAVEN_HOME
 
