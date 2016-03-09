@@ -92,5 +92,11 @@
       alias expweb-latest-version="p4 counters | grep trunk-ci_last_green_cl | ggrep -oP '(\d)+'"
       expweb-sync-latest() {
         eval "cd-expweb";
-        p4 sync -f ${TRUNK}/...@$(expweb-latest-version);
+        p4 sync ${TRUNK}/...@$(expweb-latest-version);
       }
+
+
+    # Docker Commands
+    # -------------------------------------------------------------------
+      alias docker-start-vm="docker-machine create --driver=virtualbox default"
+      alias docker-start-terminal="eval '$(docker-machine env default)'"
