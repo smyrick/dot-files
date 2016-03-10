@@ -87,6 +87,7 @@
       alias cd-expweb="cd $TRUNK"
       alias gw="./gradlew"
       alias expweb-clean="sudo rm -rf $TRUNK/build/tomcat"
+      alias expweb-build-full="cd-expweb; expweb-clean; gw clean build"
       alias expweb-build="cd-expweb; expweb-clean; gw clean -x check -Pdebug build"
       alias expweb-start="cd-expweb; expweb-clean; gw -Pdebug startExpweb"
       alias expweb-latest-version="p4 counters | grep trunk-ci_last_green_cl | ggrep -oP '(\d)+'"
