@@ -88,9 +88,9 @@
       alias gw="./gradlew"
       alias expweb-clean="sudo rm -rf $TRUNK/build/tomcat"
       alias expweb-build="cd-expweb; expweb-clean; gw clean build"
-      alias expweb-build-fast="cd-expweb; expweb-clean; gw clean -x check –x minifyResources -Pdebug build"
+      alias expweb-build-fast="cd-expweb; expweb-clean; gw clean -Xcheck –XminifyResources -Pdebug build"
       alias expweb-start="cd-expweb; expweb-clean; gw -Pdebug startExpweb"
-      alias expweb-latest-version="p4 counters | grep trunk-ci_last_green_cl | ggrep -oP '(\d)+'"
+      alias expweb-latest-version="p4 counters -e expweb_trunk-ci_last_green_cl | ggrep -oP '(\d)+'"
       expweb-sync-latest() {
         eval "cd-expweb";
         p4 sync ${TRUNK}/...@$(expweb-latest-version);
@@ -100,4 +100,6 @@
     # Docker Commands
     # -------------------------------------------------------------------
       alias docker-start-vm="docker-machine create --driver=virtualbox default"
-      alias docker-start-terminal="eval '$(docker-machine env default)'"
+      #docker-start-terminal() {
+      #  eval "$(docker-machine env default)";
+      #}
