@@ -7,6 +7,7 @@
     # Quick Commands
     # -------------------------------------------------------------------
       start-workday() {
+        source ~/.bash_profile;
         printHeader "Sync P4 files";
         #eval nlp-sync; eval smartdata-sync; eval nautilus-sync; eval semantha-sync;
         #eval expweb-sync-latest;
