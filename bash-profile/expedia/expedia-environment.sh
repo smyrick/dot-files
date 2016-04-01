@@ -21,7 +21,6 @@
     export P4CONFIG=p4.ini
 
     # Build / Output paths
-    export BUILD_SYSTEM_ROOT=$P4_1967/depot/b/releasemanagement/products/BuildSystem
     export OUTPUT_ROOT=$HOME/build
     export TEMP=$HOME/temp
 
@@ -34,10 +33,6 @@
     #export JAVA_VERSION=1.7.0_60
     export JAVA_VERSION=1.8.0_74
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk$JAVA_VERSION.jdk/Contents/Home
-
-    # Ant Path
-    export ANT_VERSION=1.8.1
-    export ANT_HOME=$BUILD_SYSTEM_ROOT/buildsupport/apache-ant-$ANT_VERSION
 
     # Maven Path
     export MAVEN_VERSION=3.3.9
