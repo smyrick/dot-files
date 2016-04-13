@@ -4,6 +4,9 @@
 #   Commands
 #   -------------------------------
 
+    TRUNK=$P4_1994/www/expweb/trunk
+    EXP-DEVOPS=$HOME/src/git/exp-devops
+
     # Quick Commands
     # -------------------------------------------------------------------
       start-workday() {
@@ -13,12 +16,15 @@
         brew update; brew upgrade --all; brew cleanup; brew doctor;
         printHeader "Update npm packages";
         npm update -g;
+        printHeader "Update exp-devops";
+        cd $EXP-DEVOPS; git pull upstream master && git push;
       }
+
+
 
 
     # ExpWeb Commands
     # -------------------------------------------------------------------
-      TRUNK=$P4_1994/www/expweb/trunk
       alias cd-expweb="cd $TRUNK; clear;"
       alias gw="./gradlew"
       alias expweb-clean="sudo rm -rf $TRUNK/build"
