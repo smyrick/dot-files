@@ -5,7 +5,7 @@
 #   -------------------------------
 
     TRUNK=$P4_1994/www/expweb/trunk
-    EXP-DEVOPS=$HOME/src/git/exp-devops
+    EXP_DEVOPS=$HOME/src/git/exp-devops
 
     # Quick Commands
     # -------------------------------------------------------------------
@@ -17,7 +17,7 @@
         printHeader "Update npm packages";
         npm update -g;
         printHeader "Update exp-devops";
-        cd $EXP-DEVOPS; git checkout master; git pull upstream master; git push;
+        cd ${EXP_DEVOPS}; git checkout master; git pull upstream master; git push;
       }
 
 
