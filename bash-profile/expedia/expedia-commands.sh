@@ -17,7 +17,8 @@
         printHeader "Update npm packages";
         npm update -g;
         printHeader "Update exp-devops";
-        cd ${EXP_DEVOPS}; git checkout master; git pull upstream master; git push;
+        command cd ${EXP_DEVOPS}; git checkout master; git pull upstream master; git push;
+        command cd;
       }
 
 
@@ -25,7 +26,7 @@
 
     # ExpWeb Commands
     # -------------------------------------------------------------------
-      alias cd-expweb="cd $TRUNK; clear;"
+      alias cd-expweb="command cd $TRUNK"
       alias gw="./gradlew"
       alias expweb-clean="sudo rm -rf $TRUNK/build"
       alias expweb-build="cd-expweb; expweb-clean; gw clean build"
