@@ -3,6 +3,9 @@
 #   -------------------------------
 #   Node Environment
 #   -------------------------------
+#
+    export NVM_DIR="$HOME/.nvm"
+    . "$(brew --prefix nvm)/nvm.sh"
 
     NPM_PACKAGES="$HOME/.npm-packages"
     NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
