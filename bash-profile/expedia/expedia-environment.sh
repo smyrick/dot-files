@@ -5,8 +5,10 @@
     ulimit -n 65536
     ulimit -u 2048
 
-# Perforce file mappings
+# File paths
 # -------------------------------------------------------------------
+
+    # P4 Shortcut paths
     P4_ROOT=$HOME/src/perforce
     P4_1953=$P4_ROOT/1953
     P4_1967=$P4_ROOT/1967
@@ -16,6 +18,12 @@
     E3_MODULES=$E3_SHOPSVC/modules
     E3_PRODUCTS=$E3_SHOPSVC/products
     E3_PROTOTYPES=$E3_SHOPSVC/prototypes/modules
+
+    # ExpWeb trunk
+    TRUNK=$P4_1994/www/expweb/trunk
+
+    # ExpDevops repo
+    EXP_DEVOPS=$HOME/src/git/exp-devops
 
     # Build / Output paths
     export BUILD_SYSTEM_ROOT=$P4_1967/depot/b/releasemanagement/products/BuildSystem

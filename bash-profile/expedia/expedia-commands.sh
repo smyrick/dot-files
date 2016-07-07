@@ -4,9 +4,6 @@
 #   Commands
 #   -------------------------------
 
-    TRUNK=$P4_1994/www/expweb/trunk
-    EXP_DEVOPS=$HOME/src/git/exp-devops
-
     # Quick Commands
     # -------------------------------------------------------------------
       start-workday() {
