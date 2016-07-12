@@ -22,8 +22,11 @@
     # ExpWeb trunk
     TRUNK=$P4_1994/www/expweb/trunk
 
-    # ExpDevops repo
-    EXP_DEVOPS=$HOME/src/git/exp-devops
+	# Github repos path
+	GITHUB_REPOS=$HOME/src/github
+
+	# EWE GitHub repos path
+	EWE_GITHUB_REPOS=$HOME/src/ewegithub
 
     # Build / Output paths
     export BUILD_SYSTEM_ROOT=$P4_1967/depot/b/releasemanagement/products/BuildSystem

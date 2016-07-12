@@ -14,7 +14,7 @@
         printHeader "Update npm packages";
         npm update -g;
         printHeader "Update exp-devops";
-        command cd ${EXP_DEVOPS}; git checkout master; git pull upstream master; git push;
+        command cd ${GITHUB_REPOS}/exp-devops; git checkout master; git pull upstream master; git push;
         command cd $HOME;
       }
 
