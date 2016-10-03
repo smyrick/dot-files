@@ -10,7 +10,7 @@
         source ~/.bash_profile;
         command cd;
         printHeader "Update brew formula";
-        brew update; brew upgrade --all; brew cleanup; brew doctor;
+        brew update; brew upgrade; brew cleanup; brew doctor;
         printHeader "Update npm packages";
         npm update -g;
         command cd $HOME;
