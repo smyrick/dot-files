@@ -21,7 +21,7 @@
     E3_PROTOTYPES=$E3_SHOPSVC/prototypes/modules
 
     # ExpWeb trunk
-    TRUNK=$P4_1994/www/expweb/trunk
+    export TRUNK=$P4_1994/www/expweb/trunk
 
     # Github repos path
     GITHUB_REPOS=$HOME/src/github
@@ -30,7 +30,6 @@
     EWE_GITHUB_REPOS=$HOME/src/ewegithub
 
     # Build / Output paths
-    export BUILD_SYSTEM_ROOT=$P4_1967/depot/b/releasemanagement/products/BuildSystem
     export OUTPUT_ROOT=$HOME/build
     export TEMP=$HOME/temp
 
@@ -54,10 +53,6 @@
     export MAVEN_VERSION=3.3.9
     export MAVEN_HOME=/usr/local/Cellar/maven/$MAVEN_VERSION/libexec
     export M3_HOME=$MAVEN_HOME
-
-    # Ant Path
-    export ANT_VERSION=1.8.1
-    export ANT_HOME=$BUILD_SYSTEM_ROOT/buildsupport/apache-ant-$ANT_VERSION
 
     # Add to PATH
     export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin:$M3_HOME/bin

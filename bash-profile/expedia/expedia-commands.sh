@@ -7,7 +7,7 @@
     # Quick Commands
     # -------------------------------------------------------------------
     start-workday() {
-        source ~/.bash_profile;
+        source $HOME/.bash_profile;
         printHeader "Update brew formula";
         brew upgrade; brew cleanup; brew doctor;
         printHeader "Update npm packages";
