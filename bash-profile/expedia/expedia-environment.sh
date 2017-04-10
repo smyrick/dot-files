@@ -50,9 +50,10 @@
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk$JAVA_VERSION.jdk/Contents/Home
 
     # Maven Path
-    export MAVEN_VERSION=3.3.9
+    export MAVEN_VERSION=3.5.0
     export MAVEN_HOME=/usr/local/Cellar/maven/$MAVEN_VERSION/libexec
     export M3_HOME=$MAVEN_HOME
+    export M2_HOME=$MAVEN_HOME
 
     # Add to PATH
     export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin:$M3_HOME/bin
