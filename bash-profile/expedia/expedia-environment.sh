@@ -46,8 +46,8 @@
 
     # Java Path
     #export JAVA_VERSION=1.7.0_60
-    export JAVA_VERSION=1.8.0_74
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk$JAVA_VERSION.jdk/Contents/Home
+    #export JAVA_VERSION=1.8.0_131
+    #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk$JAVA_VERSION.jdk/Contents/Home
 
     # Maven Path
     export MAVEN_VERSION=3.5.0
@@ -56,4 +56,4 @@
     export M2_HOME=$MAVEN_HOME
 
     # Add to PATH
-    export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin:$M3_HOME/bin
+    export PATH=$PATH:$M3_HOME/bin
