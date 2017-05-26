@@ -39,21 +39,3 @@
     # Build / Output paths
     export OUTPUT_ROOT=$HOME/build
     export TEMP=$HOME/temp
-
-
-# Java, Tomcat, Maven, and Ant Paths
-# -------------------------------------------------------------------
-
-    # Java Path
-    #export JAVA_VERSION=1.7.0_60
-    #export JAVA_VERSION=1.8.0_131
-    #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk$JAVA_VERSION.jdk/Contents/Home
-
-    # Maven Path
-    export MAVEN_VERSION=3.5.0
-    export MAVEN_HOME=/usr/local/Cellar/maven/$MAVEN_VERSION/libexec
-    export M3_HOME=$MAVEN_HOME
-    export M2_HOME=$MAVEN_HOME
-
-    # Add to PATH
-    export PATH=$PATH:$M3_HOME/bin
