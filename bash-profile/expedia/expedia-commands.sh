@@ -8,6 +8,12 @@
     # -------------------------------------------------------------------
     start-workday() {
         source $HOME/.bash_profile;
+
+        # Update vault - This command is on my local computer to hide the endpoint
+        # Requires SEA password
+        printHeader "Update Vault token";
+        vault_update;
+
         printHeader "Update brew formula";
         brew upgrade; brew cleanup; brew doctor;
         printHeader "Update npm packages";
