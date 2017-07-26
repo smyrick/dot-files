@@ -16,8 +16,6 @@
 
         printHeader "Update brew formula";
         brew upgrade; brew cleanup; brew doctor;
-        printHeader "Update npm packages";
-        npm update -g;
     }
 
     # ExpWeb Commands
