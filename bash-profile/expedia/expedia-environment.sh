@@ -33,3 +33,6 @@
     # Build / Output paths
     export OUTPUT_ROOT=$HOME/build
     export TEMP=$HOME/temp
+
+    export JAVA_VERSION=1.8.0_141
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk$JAVA_VERSION.jdk/Contents/Home
