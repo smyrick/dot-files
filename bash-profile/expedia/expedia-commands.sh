@@ -9,7 +9,7 @@
     start-workday() {
         source $HOME/.bash_profile;
 
-        # Update vault - This command is on my local computer to hide the endpoint
+        # Update vault
         # Requires SEA password
         printHeader "Update Vault token";
         vault_update;
@@ -29,8 +29,8 @@
     alias expweb-start-stub="cd-expweb; expweb-clean; gw -Pdebug -Pstub startExpweb"
     alias expweb-latest-version="cd-expweb; p4 counters -e expweb_trunk-ci_last_green_cl | ggrep -oP '(\d)+'"
     expweb-sync-latest() {
-    eval "cd-expweb";
-    p4 sync ${TRUNK}/...@$(expweb-latest-version);
+        eval "cd-expweb";
+        p4 sync ${TRUNK}/...@$(expweb-latest-version);
     }
 
 
@@ -40,3 +40,12 @@
     #docker-start-terminal() {
     #  eval "$(docker-machine env default)";
     #}
+
+
+    # Vault Commands
+    # -------------------------------------------------------------------
+
+    # Get a vault token, variables are on my local computer to hide the data
+    function vault_update() {
+        vault login -address=$VAULT_EXPEDIA_ADDRESS -method=$VAULT_METHOD username=$VALUT_USERNAME
+    }
