@@ -14,6 +14,9 @@
         printHeader "Update Vault token";
         vault_update;
 
+        printHeader "Update AWS keys";
+        aws_key_gen login;
+        
         printHeader "Update brew formula";
         brew upgrade; brew cleanup; brew doctor;
     }
