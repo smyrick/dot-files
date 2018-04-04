@@ -4,8 +4,8 @@
 #   Auto Tab Complete
 #   -------------------------------
 
-    # AWS CLI autocomplete:
-    complete -C aws_completer aws
+# AWS CLI autocomplete:
+complete -C aws_completer aws
 
-    # Bash completion
-    [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+# Bash completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
