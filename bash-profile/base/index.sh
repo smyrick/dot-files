@@ -6,4 +6,4 @@
 DIR="$( dirname "${BASH_SOURCE[0]}" )"
 
 source ${DIR}/base-environment.sh
-source ${DIR}/base_commands.sh
+source ${DIR}/base-commands.sh
