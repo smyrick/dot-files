@@ -28,5 +28,5 @@ function brew_update() {
 
 # Get a vault token, variables are on my local computer to hide the data
 function vault_update() {
-    vault login -address=$VAULT_EXPEDIA_ADDRESS -method=$VAULT_METHOD username=$VALUT_USERNAME
+    vault login -address=${VAULT_EXPEDIA_ADDRESS} -method=${VAULT_METHOD} username=${VALUT_USERNAME}
 }
