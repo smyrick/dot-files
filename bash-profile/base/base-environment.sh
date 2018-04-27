@@ -13,3 +13,6 @@ export PATH=/usr/local/bin:/usr/local:/usr/bin:/bin:/usr/sbin:/sbin:/opt/bin
 
 #   Set default blocksize for ls, df, du
 export BLOCKSIZE=1k
+
+# Set ls colors for black terminal
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
