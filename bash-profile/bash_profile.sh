@@ -3,15 +3,12 @@
 # Initialize bash environment
 #
 # Shane Myrick
-# swmyrick@gmail.com
+# mail@shanemyrick.com
 #
-# Heavily inspired from: http://natelandau.com/my-mac-osx-bash_profile/
+# Inspired from: http://natelandau.com/my-mac-osx-bash_profile/
 
-DIR="$( dirname "${BASH_SOURCE[0]}" )"
-source ${DIR}/base/index.sh;
+ROOT_DIR="$( dirname "${BASH_SOURCE[0]}" )"
 
-DIR="$( dirname "${BASH_SOURCE[0]}" )"
-source ${DIR}/tools/index.sh;
-
-DIR="$( dirname "${BASH_SOURCE[0]}" )"
-source ${DIR}/expedia/index.sh;
+source ${ROOT_DIR}/base/index.sh;
+source ${ROOT_DIR}/tools/index.sh;
+source ${ROOT_DIR}/expedia/index.sh;

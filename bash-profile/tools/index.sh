@@ -3,7 +3,7 @@
 #   ---------------------------------
 #   Extra tools and evironments files
 #   ---------------------------------
-DIR="$( dirname "${BASH_SOURCE[0]}" )"
+TOOLS_DIR="$( dirname "${BASH_SOURCE[0]}" )"
 
-source ${DIR}/auto-complete.sh
-source ${DIR}/nodejs.sh
+source ${TOOLS_DIR}/auto-complete.sh
+source ${TOOLS_DIR}/nodejs.sh
