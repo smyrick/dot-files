@@ -2,10 +2,9 @@
 
 # Initialize bash environment
 #
-# Shane Myrick
-# mail@shanemyrick.com
-#
-# Inspired from: http://natelandau.com/my-mac-osx-bash_profile/
+# Author:
+#   Shane Myrick
+#   mail@shanemyrick.com
 
 ROOT_DIR="$( dirname "${BASH_SOURCE[0]}" )"
 
