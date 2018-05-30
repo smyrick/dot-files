@@ -14,3 +14,6 @@ alias ..='cd ../'
 
 # Go back 2 directory levels
 alias ...='cd ../../'
+
+# Go back 3 directory levels
+alias ....='cd ../../../'
