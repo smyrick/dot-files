@@ -17,3 +17,7 @@ alias ...='cd ../../'
 
 # Go back 3 directory levels
 alias ....='cd ../../../'
+
+# Hub is an extenstion to the git CLI
+# https://hub.github.com/
+alias git=hub

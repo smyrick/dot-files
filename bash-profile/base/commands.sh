@@ -1,23 +1,9 @@
 #!/usr/bin/env bash
 
-# ---------------------------------------------------
-# printHeader: print text in color appending '-----'
-# string to the start and to the end
-#
-# Params:
-#   $1 = string to print
-#   $2 = tput color code, default 14 (light-blue)
-# ---------------------------------------------------
-printHeader () {
-    colorCode=14
-    echo "$(tput setaf ${2-${colorCode}})----- $1 -----$(tput sgr 0)"
-}
-
-
 # ----------------------------------------------------
 # extract: Extract most know archives with one command
 # ----------------------------------------------------
-extract () {
+function extract () {
     if [ -f $1 ] ; then
       case $1 in
         *.tar.bz2)   tar xjf $1     ;;
@@ -36,4 +22,22 @@ extract () {
      else
          echo "'$1' is not a valid file"
      fi
+}
+
+# ------------------
+# Update my bash env
+# ------------------
+function update_bash() {
+    echo "source $HOME/.bash_profile";
+    source $HOME/.bash_profile;
+
+    echo "Update brew formula";
+    brew_update;
+}
+
+# ---------------
+# Update Homebrew
+# ---------------
+function brew_update() {
+    brew upgrade; brew cleanup; brew doctor;
 }
