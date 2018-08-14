@@ -27,17 +27,15 @@ function extract () {
 # ------------------
 # Update my bash env
 # ------------------
-function update_bash() {
+function bash-update() {
     echo "source $HOME/.bash_profile";
     source $HOME/.bash_profile;
-
-    echo "Update brew formula";
-    brew_update;
 }
 
 # ---------------
 # Update Homebrew
 # ---------------
-function brew_update() {
+function brew-update() {
+    echo "Updating brew formula...";
     brew upgrade; brew cleanup; brew doctor;
 }
