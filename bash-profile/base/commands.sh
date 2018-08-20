@@ -44,5 +44,5 @@ function brew-update() {
 # Parse the current Git branch
 # ----------------------------
 function parse-git-branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\(.*\)/\1/' | sed 's/ //g';
+    git branch 2> /dev/null | sed -e '/^[^*]/d' | sed -e 's,* \(.*\),(\1),g' | sed -e 's, ,,g';
 }
