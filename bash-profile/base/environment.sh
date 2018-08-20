@@ -5,8 +5,7 @@
 #   -------------------------------
 
 #   Change Prompt
-export PS1="----------------------------\n[\e[0;36m\w\e[m] \n| => "
-export PS2="| => "
+export PS1="-------------------------------\n[\e[0;36m\w\e[m][\e[0;35m\$(parse-git-branch)\e[m] "
 
 #   Set Default Path
 export PATH=/usr/local/bin:/usr/local:/usr/bin:/bin:/usr/sbin:/sbin:/opt/bin

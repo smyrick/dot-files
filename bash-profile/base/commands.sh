@@ -39,3 +39,10 @@ function brew-update() {
     echo "Updating brew formula...";
     brew upgrade; brew cleanup; brew doctor;
 }
+
+# ----------------------------
+# Parse the current Git branch
+# ----------------------------
+function parse-git-branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\(.*\)/\1/' | sed 's/ //g';
+}
