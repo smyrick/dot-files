@@ -21,3 +21,11 @@ alias ....='cd ../../../'
 # Hub is an extenstion to the git CLI
 # https://hub.github.com/
 alias git=hub
+
+# A cat(1) clone with syntax highlighting and Git integration.
+# https://github.com/sharkdp/bat
+alias cat=bat
+
+# Simplified and community-driven man pages
+# https://github.com/tldr-pages/tldr
+alias help='tldr'
